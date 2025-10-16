@@ -1,66 +1,128 @@
-:root{
+:root {
     --primary-color: #fff;
-    --secundary-color:#9eb3c2;
+    --secundary-color: #9eb3c2;
     --text-btn-color: #333;
-    --btn-color:#0278a7;
+    --btn-color: #0278a7;
+    --btn-color-hover: #0278a7;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-background: url('.. img/nigth.jpeg') no-repeat;
-background-size: cover;
-background-position:center;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../img/night.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-    .wrapper{
-        width: 420px;
-        background: transparent;
-        border: 2px solid rgba(255,255,255, .2);
-        backdrop-filter: blur(20px);
-        box-shadow: 0 0 10px rgba(0,0,0,.2);
-         color: var(--primary-color);
-        border-radius: 10px;
-        padding: 30px 40px;
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding: 30px 40px;
 
-        h1{
-            font-size: 36px;
-            text-align: center;
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .input-box {
+        width: 100%;
+        height: 60px;
+        position: relative;
+        margin-top: 20px;
+
+        input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: var(--primary-color);
+            padding: 20px 40px 20px 20px;
+
+            &::placeholder {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    .remember-fogot {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14.5px;
+        margin: 15px 5px 15px;
+        flex-wrap: wrap;
+
+        label input {
+            accent-color: var(--primary-color);
+            margin-right: 3px;
         }
 
-        .input-box{
-            width: 100%;
-            height: 60px;
-            position: relative;
-            margin-top: 20px;
-                    }
-                    input{
-                        width: 100%;
-                        height: 100%;
-                        background: transparent;
-                        border: none;
-                        outline: none;
-                        border: 2px solid rgba(255,255,255, .2);
-                        border-radius: 40px;
-                        font-size: 16px;
-                        color: var(--primary-color);
-                        padding: 20px 40px 20px 20px;
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
 
-                        &::placeholder{
-                            color: va;
-                        }
-                    }
-                    }
+            &:hover {
+                text-decoration: underline;
+                color: var(--secundary-color);
+            }
+        }
+
+    }
+
+    .btn {
+        width: 100%;
+        height: 45px;
+        background: var(--primary-color);
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        cursor: pointer;
+        color: var(--text-btn-color);
+        font-weight: 700;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: var(--btn-color-hover);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+    }
+
+    .register-link{
+        display: flex;
+        flex-direction: column;
+        font-size: 14.5px;
+        text-align: center;
+        margin: 20px 0 15px;
+        gap: 8px;
+
+        a{
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+                color: var(--secundary-color);
+            }
+        }
     }
 }
-
-
